@@ -113,4 +113,19 @@ class User extends BaseModel implements UserInterface, RemindableInterface
         $this->attributes['password'] = Hash::needsRehash($value) ? Hash::make($value) : $value;
     }
 
+    public function getRememberToken()
+    {
+        return $this->remember_token;
+    }
+
+    public function setRememberToken($value)
+    {
+        $this->remember_token = $value;
+    } 
+
+    public function getRememberTokenName()
+    {
+        return 'remember_token';
+    }
+
 }

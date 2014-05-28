@@ -9,7 +9,7 @@ class BlogController extends BaseController
     public function getIndex()
     {
         $articles   = Article::orderBy('created_at', 'desc')->paginate(5);
-        $categories = Category::orderBy('sort_order')->get();
+        $categories = self::getCategory();
         return View::make('blog.index')->with(compact('articles', 'categories'));
     }
 
@@ -20,7 +20,7 @@ class BlogController extends BaseController
     public function getCategoryArticles($category_id)
     {
         $articles   = Article::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(5);
-        $categories = Category::orderBy('sort_order')->get();
+        $categories = self::getCategory();
         return View::make('blog.categoryArticles')->with(compact('articles', 'categories', 'category_id'));
     }
 
@@ -33,7 +33,7 @@ class BlogController extends BaseController
     {
         $article    = Article::where('slug', $slug)->first();
         is_null($article) AND App::abort(404);
-        $categories = Category::orderBy('sort_order')->get();
+        $categories = self::getCategory();
         return View::make('blog.show')->with(compact('article', 'categories'));
     }
 
@@ -67,6 +67,11 @@ class BlogController extends BaseController
             // 创建失败
             return Redirect::back()->withInput()->with('error', '评论失败。');
         }
+    }
+
+    private function getCategory()
+    {
+        return Category::orderBy('sort_order')->get();
     }
 
 }
