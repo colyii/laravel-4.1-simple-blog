@@ -26,7 +26,7 @@ return array(
     |
     */
 
-    'url' => 'http://laravel.dev:8000/public',
+    'url' => 'http://laravel-blog.local',
 
     /*
     |--------------------------------------------------------------------------
