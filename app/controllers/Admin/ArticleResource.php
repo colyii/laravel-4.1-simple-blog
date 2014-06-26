@@ -37,6 +37,7 @@ class Admin_ArticleResource extends BaseResource
      * @var array
      */
     protected $validatorMessages = array(
+        'category.required'=> '请填选择文章分类。或<a href="http://laravel-blog.local/admin/categories/create">添加</a>',
         'title.required'   => '请填写文章标题。',
         'title.unique'     => '已有同名文章。',
         'slug.required'    => '请填写文章 sulg。',
@@ -94,7 +95,7 @@ class Admin_ArticleResource extends BaseResource
             'title'    => 'required|'.$unique,
             'slug'     => 'required|'.$unique,
             'content'  => 'required',
-            'category' => 'exists:article_categories,id',
+            'category' => 'required|exists:article_categories,id',
         );
         // 自定义验证消息
         $messages = $this->validatorMessages;

@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sqlite',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'laravel-4.1-simple-blog',
+			'host'      => '112.126.66.204',
+			'database'  => 'php2py',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => '123456',
 			'charset'   => 'utf8',
 			// 'collation' => 'utf8_unicode_ci',
 			'collation' => 'utf8_general_ci',

@@ -143,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "edd507dacfacab7fcfcee6c5fcfad3335d0ec85f"
+                "reference": "fd4a76e59ecc961457e459d2c9fe975b5a44c220"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/edd507dacfacab7fcfcee6c5fcfad3335d0ec85f",
-                "reference": "edd507dacfacab7fcfcee6c5fcfad3335d0ec85f",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/fd4a76e59ecc961457e459d2c9fe975b5a44c220",
+                "reference": "fd4a76e59ecc961457e459d2c9fe975b5a44c220",
                 "shasum": ""
             },
             "require": {
@@ -193,7 +193,7 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2014-06-16 09:52:34"
+            "time": "2014-06-20 18:11:24"
         },
         {
             "name": "ircmaxell/password-compat",
